@@ -1,7 +1,7 @@
 export const CHAIN_ID = 4663
 
-export const ROUTER = '0x87cD67C1C4adFac2BF8e1B2f30f3802a70712e64' as const
-export const QUOTER = '0x9616D53a9B55d82e56c6c08Ca7E2beD6D7e1bE1B' as const
+export const ROUTER = '0x87cD7EbE8c213455e5e5a8554657D5f294a82e64' as const
+export const QUOTER = '0x9616627E871c96e38cb21b9551F62Ed93366bE1B' as const
 export const ROUTER_V4 = '0x290b9b46308f7a3B80A5F62214B426d3bfAfaab5' as const
 export const QUOTER_V4 = '0x5858F06894623eF4862103A747074E5AA3436d4F' as const
 export const UNISWAP_V4_SINGLETON = '0xc851aDa1e4Fa2A9dd5483284d6b30e2950Cc4F04' as const
