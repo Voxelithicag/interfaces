@@ -11,13 +11,3 @@ export const TOKENS: Record<string, TokenMeta> = {
   AMZN:  { symbol: 'AMZN',  name: 'Amazon.com, Inc.',      decimals: 18, address: '0x16d9d5e3c0e5e15e01efbb0de7dc7001f3cc8f32' },
   COIN:  { symbol: 'COIN',  name: 'Coinbase Global, Inc.', decimals: 18, address: '0x36f5b5b81e51db83ae8e3e8e6f438dead12e21bf' },
 }
-
-// updated: iteration 11
-
-// updated: iteration 12
-
-// updated: iteration 16
-
-// updated: iteration 18
-
-// updated: iteration 25

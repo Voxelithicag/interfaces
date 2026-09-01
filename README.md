@@ -5,7 +5,7 @@ TypeScript types, ABIs, and deployed addresses for Voxelithic contracts on Robin
 ## Install
 
 ```bash
-npm install @voxelithic/interfaces
+npm install github:Voxelithicag/interfaces
 ```
 
 ## Usage
@@ -24,17 +24,3 @@ import type { Route, Hop, PoolKey } from '@voxelithic/interfaces'
 ## License
 
 MIT
-
-// updated: iteration 13
-
-// updated: iteration 15
-
-// updated: iteration 19
-
-// updated: iteration 20
-
-<!-- v1000 -->
-
-<!-- v1002 -->
-
-<!-- v1004 -->
