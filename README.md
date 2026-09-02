@@ -1,5 +1,9 @@
 # voxelithic-interfaces
 
+[![CI](https://github.com/Voxelithicag/interfaces/actions/workflows/ci.yml/badge.svg)](https://github.com/Voxelithicag/interfaces/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/voxelithic-interfaces?color=0b0d10)](https://www.npmjs.com/package/voxelithic-interfaces)
+[![license](https://img.shields.io/badge/license-MIT-d4d9e1)](LICENSE)
+
 TypeScript types, contract ABIs and verified addresses for Voxelithic on Robinhood Chain (4663).
 
 ## Install
@@ -58,6 +62,18 @@ node scripts/gen-tokens.mjs /path/to/app/config.js
 
 Every address is verified against mainnet as it is written. The script exits
 non-zero and leaves the file untouched if anything fails.
+
+## Tests
+
+```bash
+npm test              # imports the built package and checks its shape
+npm run test:onchain  # every address in the package must exist on mainnet
+```
+
+The first suite runs against `dist`, not the sources, because that is where a
+published package actually breaks. The second one is why the addresses here can
+be trusted: an address with no contract, a mismatched symbol or wrong decimals
+fails the run. Both are wired into CI on every push.
 
 ## Contracts
 
