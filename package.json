@@ -1,12 +1,47 @@
 {
-  "name": "@voxelithic/interfaces",
+  "name": "voxelithic-interfaces",
   "version": "0.4.0",
-  "description": "TypeScript types, ABIs, and contract addresses for Voxelithic",
+  "description": "TypeScript types, contract ABIs and verified addresses for Voxelithic on Robinhood Chain (4663)",
+  "keywords": [
+    "robinhood-chain",
+    "tokenized-equities",
+    "dex-aggregator",
+    "uniswap-v4",
+    "abi",
+    "evm"
+  ],
+  "homepage": "https://voxelithic.xyz",
+  "bugs": "https://github.com/Voxelithicag/interfaces/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Voxelithicag/interfaces.git"
+  },
+  "license": "MIT",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
-  "scripts": { "build": "tsc" },
-  "files": ["dist/", "src/"],
-  "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/Voxelithicag/interfaces" }
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc",
+    "gen:tokens": "node scripts/gen-tokens.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
 }
