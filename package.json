@@ -1,6 +1,6 @@
 {
   "name": "voxelithic-interfaces",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "TypeScript types, contract ABIs and verified addresses for Voxelithic on Robinhood Chain (4663)",
   "keywords": [
     "robinhood-chain",

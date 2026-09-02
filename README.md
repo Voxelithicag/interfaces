@@ -50,6 +50,7 @@ The full picture of what else carries these tickers is at
 | `ROUTER`, `QUOTER` | Uniswap v3 style venues, deployed and verified |
 | `ROUTER_V4`, `QUOTER_V4` | Uniswap v4 singleton branch |
 | `UNISWAP_V4_SINGLETON` | the v4 pool manager |
+| `TREASURY` | fee recipient; everything it receives is swapped into VOXEL and burned |
 | `TOKENS`, `SYMBOLS`, `addressOf` | canonical token set |
 | `VoxRouterABI`, `VoxQuoterABI`, `VoxRouterV4ABI`, `VoxQuoterV4ABI` | ABIs taken from the Foundry build artifacts, not retyped |
 | `Hop`, `Route`, `Quote`, `PoolKey` | request and response shapes |
@@ -83,8 +84,9 @@ fails the run. Both are wired into CI on every push.
 | VoxQuoter | `0x9616627E871c96e38cb21b9551F62Ed93366bE1B` |
 | VoxRouterV4 | `0x290b9b46308f7a3B80A5F62214B426d3bfAfaab5` |
 | VoxQuoterV4 | `0x5858F06894623eF4862103A747074E5AA3436d4F` |
+| VoxTreasury | `0xDfC6004E2a56de0e59007BFC4F3E3890a889af67` |
 
-All four are verified on
+All five are verified on
 [Blockscout](https://robinhoodchain.blockscout.com/address/0x87cD7EbE8c213455e5e5a8554657D5f294a82e64).
 
 ## License

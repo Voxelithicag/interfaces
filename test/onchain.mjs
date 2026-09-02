@@ -10,7 +10,7 @@
  * красит сборку красным из-за недоступной ноды.
  */
 import {
-  TOKENS, SYMBOLS, ROUTER, QUOTER, ROUTER_V4, QUOTER_V4,
+  TOKENS, SYMBOLS, ROUTER, QUOTER, ROUTER_V4, QUOTER_V4, TREASURY,
 } from "../dist/index.js";
 
 const RPC = process.env.VOX_RPC || "https://rpc.mainnet.chain.robinhood.com";
@@ -39,7 +39,7 @@ const decodeString = (hex) => {
 
 let bad = 0;
 
-for (const [name, addr] of Object.entries({ ROUTER, QUOTER, ROUTER_V4, QUOTER_V4 })) {
+for (const [name, addr] of Object.entries({ ROUTER, QUOTER, ROUTER_V4, QUOTER_V4, TREASURY })) {
   const code = await rpc("eth_getCode", [addr, "latest"]);
   if (!code || code === "0x") {
     console.error(`  ПУСТО  ${name} ${addr}`);
@@ -72,4 +72,4 @@ if (bad) {
   console.error(`\nрасхождений с чейном: ${bad}`);
   process.exit(1);
 }
-console.log(`\nвсе ${SYMBOLS.length + 4} адресов совпали с мейннетом`);
+console.log(`\nвсе ${SYMBOLS.length + 5} адресов совпали с мейннетом`);
