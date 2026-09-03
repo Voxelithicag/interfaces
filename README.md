@@ -55,6 +55,27 @@ The full picture of what else carries these tickers is at
 | `VoxRouterABI`, `VoxQuoterABI`, `VoxRouterV4ABI`, `VoxQuoterV4ABI` | ABIs taken from the Foundry build artifacts, not retyped |
 | `Hop`, `Route`, `Quote`, `PoolKey` | request and response shapes |
 
+## Or skip the install
+
+The same routing is available over HTTP, with no package and no key:
+
+```bash
+curl 'https://voxelithic.xyz/api/v1/quote?tokenIn=USDG&tokenOut=SPY&amountIn=10'
+```
+
+`/tokens` and `/venues` mirror the exports above, `/quote` compares every direct
+pool that can actually take the size, `/swap` returns an unsigned transaction and
+`/verify` reads what a fill really did from its receipt.
+
+The API holds no keys and cannot broadcast. Spec and service level:
+[openapi.json](https://voxelithic.xyz/api/v1/openapi.json).
+
+Inside an agent, the same calls arrive as MCP tools:
+
+```json
+{ "mcpServers": { "voxelithic": { "command": "npx", "args": ["-y", "voxelithic-mcp"] } } }
+```
+
 ## Regenerating the token set
 
 ```bash
